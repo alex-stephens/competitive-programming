@@ -19,12 +19,10 @@ while True:
     bach.sort()
     spin.sort()
     
-    
     print('Case ' + str(n) + ':', end = ' ')
     
     print(max(0, B - S), end = '')
     if B > S:
-        print(' ' + str(min(bach)))
+        print(' ' + str(min(bach))
     else:
         print('')
-    
