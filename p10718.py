@@ -1,6 +1,8 @@
 # Competitive Programming 3
 # Problem 10718
 
+# Seems to work but gets Wrong Answer
+
 def mask(a,b):
     binstr1, binstr2 = '{:032b}'.format(a), '{:032b}'.format(b)
     ans = ''
