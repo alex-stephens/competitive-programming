@@ -23,6 +23,6 @@ while True:
     
     print(max(0, B - S), end = '')
     if B > S:
-        print(' ' + str(min(bach))
+        print(' ' + str(min(bach)))
     else:
         print('')
