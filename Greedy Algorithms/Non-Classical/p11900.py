@@ -14,6 +14,4 @@ for case in range(1,T+1):
             num += 1
             total += weights[i]
 
-    print('Case ' + str(case) + ': ' + str(num) )
-    
-    
+    print('Case ' + str(case) + ': ' + str(num))
