@@ -1,8 +1,6 @@
 # Competitive Programming 3
 # Problem 10189
 
-from itertools import product
-
 num = 1
 while True:
     n, m = [int(x) for x in input().split()]
@@ -30,10 +28,5 @@ while True:
             else:
                 print(hints[i][j], end = '')
         print('')
-    
-    
-    
-    
-    
     
     num += 1
