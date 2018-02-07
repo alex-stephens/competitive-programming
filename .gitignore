@@ -6,6 +6,11 @@
 # Word temporary
 ~$*.doc*
 
+# Executables
+*.exe
+*.out
+*.app
+
 # Extensionless files
 *     # ignore everything
 !*/   # unignore directories
