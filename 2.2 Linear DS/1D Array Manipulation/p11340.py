@@ -12,7 +12,6 @@ for _ in range(T):
     for _ in range(K):
         line = input().split()
         values[line[0]] = int(line[1])
-    #print(values)
     
     cents = 0
     M = int(input())
