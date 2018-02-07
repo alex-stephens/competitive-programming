@@ -1,6 +1,7 @@
 *.pdf
 *.in
 *.out
+*.png
 
 # Word temporary
 ~$*.doc*
