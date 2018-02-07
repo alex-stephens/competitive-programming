@@ -5,3 +5,8 @@
 
 # Word temporary
 ~$*.doc*
+
+# Extensionless files
+*     # ignore everything
+!*/   # unignore directories
+!*.*  # unignore files with extensions
