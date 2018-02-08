@@ -4,43 +4,49 @@
 #include <cstdio>
 #include <iostream>
 #include <string>
+#include <map>
 using namespace std;
 
-int main() {
-
-    string line;
-    int T, K, M, count, val;
-    char character;
-    int values[256];
-
+int main(){
+    int T;
     cin >> T;
-	cin.ignore();
 
-    for (int i = 0; i < T; i++){
-        fill(values, values+256, 0); // set to zeros
-        count = 0;
+    while(T--){
+        int K;
+        scanf("%d", &K);
+        map <char, double> values;
 
-        scanf("%d\n", &K);
-
-        for (int j = 0; j < K; j++){
-            cin >> character >> val;
-            cin.ignore();
-
-            values[(int)character] = val;
+        while(K--){
+            char character;
+            int val;
+            scanf(" %c %d", &character, &val);
+            values[character] = val;
         }
 
-        cin >> M;
-        cin.ignore();
+        int count = 0;
+        string line;
+        line.reserve(10005);
+        scanf("%d", &K);
+        getline(cin, line); // newline
 
-        for (int j = 0; j < M; j++){
+        while (K--){
             getline(cin, line);
-
-            for (int k = 0; k < line.length(); k++){
-                count += values[(int)line[k]];
+            for (char c : line){
+                if (values.find(c) != values.end()){
+                    count += values[(int)c];
+                }
             }
         }
-        printf("%.2f$\n", (float)count/100);
+
+        printf("%d.%.2d$\n", count/100, count%100);
     }
+
+
+
+
+
+
+
 
     return 0;
 }
