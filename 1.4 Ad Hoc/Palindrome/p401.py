@@ -1,5 +1,5 @@
 # Competitive Programming 3
-# Problem 00401
+# Problem 401
 
 def isPalindrome(string):
     return True if string == string[::-1] else False

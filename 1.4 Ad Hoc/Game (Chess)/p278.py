@@ -1,5 +1,5 @@
 # Competitive Programming 3
-# Problem 00278
+# Problem 278
 
 T = int(input())
 

@@ -36,20 +36,18 @@ while True:
         for j in range(1,N):
             C[i][j] = grid[i][j] + C[i-1][j] + C[i][j-1] - C[i-1][j-1]
     
-    ans = 0 
+    # best 1x1 subrectangle
+    ans = max([max([grid[i][j] for i in range(N)]) for j in range(N)])    
+    
     for i in range(N):
+        print('row ' + str(i))
         for j in range(N):
             for x in range(i,N):
                 for y in range(j,N):
-                    t1 = C[x][y]
-                    t2 = C[i-1][y] if i > 0 else 0
-                    t3 = C[x][j-1] if j > 0 else 0
-                    t4 = C[i-1][j-1] if (i > 0 and j > 0) else 0
-                    ans = max(ans, t1 - t2 - t3 + t4)
+                    sub = C[x][y]
+                    sub -= C[i-1][y] if i > 0 else 0
+                    sub -= C[x][j-1] if j > 0 else 0
+                    sub += C[i-1][j-1] if (i > 0 and j > 0) else 0
+                    ans = max(ans, sub)
 
     print(ans)
-    
-        
-
-            
-       

@@ -1,5 +1,5 @@
 # Competitive Programming 3
-# Problem 00696
+# Problem 696
 
 while True:
     m, n = [int(x) for x in input().split()]

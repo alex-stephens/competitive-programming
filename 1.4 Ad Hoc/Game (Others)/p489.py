@@ -1,5 +1,5 @@
 # Competitive Programming 3
-# Problem 00489
+# Problem 489
 
 while True:
     R = int(input())

@@ -1,5 +1,5 @@
 # Competitive Programming 3
-# Problem 00573
+# Problem 573
 
 
 while True:

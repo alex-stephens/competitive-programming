@@ -1,5 +1,5 @@
 # Competitive Programming 3
-# Problem 00462
+# Problem 462
 
 def val(rank):
     if   rank == 'A': return 4
