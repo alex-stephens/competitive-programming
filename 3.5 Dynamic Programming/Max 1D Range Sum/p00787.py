@@ -12,7 +12,6 @@ while True:
     length = len(numbers)
     
     lowest, highest = [0 for _ in range(length)], [0 for _ in range(length)]
-    
     lowest[0], highest[0] = numbers[0], numbers[0]
     
     for i in range(1, length):
