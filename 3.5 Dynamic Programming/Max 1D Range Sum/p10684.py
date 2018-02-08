@@ -1,7 +1,6 @@
 # Competitive Programming 3
 # Problem 10684
 
-
 while True:
     N = int(input())
     if N == 0: break

@@ -6,7 +6,6 @@
 using namespace std;
 
 int main(){
-
     while (1){
         int N;
         cin >> N;
