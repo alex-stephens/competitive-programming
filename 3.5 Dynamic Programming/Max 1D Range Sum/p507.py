@@ -24,7 +24,6 @@ for t in range(1,T+1):
         length[i] = length[i-1] + 1 if score[i] != 0 else 0
         
     bestScore = max(score)
-    solutions = score.count(bestScore)
     bestSolIndex = score.index(max(score))
     longest = length[bestSolIndex]
     maxLength = 0

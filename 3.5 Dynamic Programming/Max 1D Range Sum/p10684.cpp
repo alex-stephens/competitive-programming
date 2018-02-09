@@ -2,7 +2,6 @@
 // Problem 10684
 
 #include <iostream>
-
 using namespace std;
 
 int main(){
