@@ -39,7 +39,6 @@ int main(){
             maxValue = max(maxValue, *max_element(m[c], m[c] + W + 1));
         }
 
-        //cout << total - 2*maxValue << endl;
         printf("%d\n", total - 2*maxValue);
     }
     return 0;
