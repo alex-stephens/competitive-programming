@@ -1,24 +1,63 @@
 # Competitive Programming 3
-# Problem 10038
+# Problem 10855
 
 while True:
-    try:
-        arr = [int(x) for x in input().split()]
-    except EOFError:
-        break
-    n = arr.pop(0)
-    diffs = [0 for _ in range(n-1)]
+    N, n = [int(x) for x in input().split()]
+    if N == 0 and n == 0: break
+
+    big = ['0'*N for _ in range(N)]
+    small = ['0'*n for _ in range(n)]
     
-    for i in range(1,n):
-        diffs[i-1] = abs(arr[i] - arr[i-1])
+    for i in range(N): big[i] = input()
+    for i in range(n): small[i] = input()
         
-    diffs.sort()
-    jolly = 1
     
-    for i in range(n-1):
-        if diffs[i] != i+1:
-            jolly = False
-            break
+    count = {0:0, 90:0, 180:0, 270:0}
     
-    if jolly: print("Jolly")
-    else:     print("Not jolly")
+    for i in range(N-n+1):
+        for j in range(N-n+1):
+            # correct orientation
+            match = True
+            for x in range(n):
+                for y in range(n):
+                    
+                    if big[i+x][j+y] != small[x][y]:
+                        match = False
+                        break
+                if not match: break
+            if match: count[0] += 1
+            
+            # 90 degrees clockwise
+            match = True
+            for x in range(n):
+                for y in range(n):
+                    if big[i+x][j+y] != small[n-1-y][x]:
+                        match = False
+                        break
+                if not match: break
+            if match: count[90] += 1
+
+            # 180 degrees clockwise
+            match = True
+            for x in range(n):
+                for y in range(n):
+                    if big[i+x][j+y] != small[n-1-y][n-1-x]:
+                        match = False
+                        break
+                if not match: break
+            if match: count[180] += 1
+
+            # 270 degrees clockwise
+            match = True
+            for x in range(n):
+                for y in range(n):
+                    if big[i+x][j+y] != small[y][n-1-x]:
+                        match = False
+                        break
+                if not match: break
+            if match: count[270] += 1
+
+    print(*[count[i] for i in range(0, 360, 90)])
+                        
+                    
+                
