@@ -14,7 +14,6 @@ for _ in range(N):
     for i in range(1,m+1):
         line = input()
         while line == '': line = input()
-        
         coins[i] = [int(x) for x in line.split()]
         
     # minimum number of coins required to get each value combination
