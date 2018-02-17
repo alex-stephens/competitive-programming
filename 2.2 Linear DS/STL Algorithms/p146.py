@@ -18,20 +18,19 @@ def nextLex(A):
         if A[l] > A[k]: break
     
     B = list(A)
-    
     B[l], B[k] = B[k], B[l]
     B[k+1:] = B[k+1:][::-1]
     
     return ''.join(B)
-    
+
 
 while True:
     string = input()
     if string == '#':
         break
-    
     new = nextLex(string)
-    if new[0] < string[0] or new == string:
+    
+    if new[0] < string[0] or new == string: # rolled over or identical
         print("No Successor")
     else:
         print(new)

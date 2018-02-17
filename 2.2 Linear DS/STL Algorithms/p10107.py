@@ -13,7 +13,7 @@ while True:
         break
     
     length += 1
-    i = bisect_left(numbers, n)
+    i = bisect_left(numbers, n)g
     numbers.insert(i, n)
     
     if length % 2 == 1:
