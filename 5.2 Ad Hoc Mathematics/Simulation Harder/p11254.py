@@ -10,6 +10,7 @@ while True:
     # n = number of terms
     # t = first term
     # then 2N = n^2 + (2t-1)n , so max n = sqrt(2N)
+    
     for n in range(int((2*N)**0.5 + 0.5), 0, -1):
         
         if (2*N - n**2 + n) % 2*n == 0:
