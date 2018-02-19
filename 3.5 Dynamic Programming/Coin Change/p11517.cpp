@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <cstring>
-
 using namespace std;
 
 #define INF (1<<30)
@@ -37,15 +36,6 @@ int main(){
         while (dp[i] == INF)
             i++;
         printf("%d %d\n", i, dp[i]);
-
-
     }
-
-
-
-
-
-
-
     return 0;
 }

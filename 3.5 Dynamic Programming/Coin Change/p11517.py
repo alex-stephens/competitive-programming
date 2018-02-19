@@ -22,7 +22,6 @@ for _ in range(T):
     
     for j in range(n):
         note = notes[j]
-        #for i in range(0,sum(notes[:j+1]) + 1):
         for i in range(sum(notes[:j]), -1, -1):
             if dp[i] != inf:
                 dp[i+note] = min(dp[i+note], dp[i] + 1)
@@ -33,4 +32,3 @@ for _ in range(T):
             print(i, dp[i])
             break
         i += 1        
-    

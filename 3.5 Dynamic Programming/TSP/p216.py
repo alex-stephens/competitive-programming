@@ -17,7 +17,6 @@ while True:
         for j in range(N):
             D[i][j] = ((x[i] - x[j])**2  + (y[i] - y[j])**2 ) ** (1/2)
             
-            
     minDist = sum([sum(D[i]) for i in range(N)])
     numbers = [x for x in range(N)]
     
