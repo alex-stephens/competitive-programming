@@ -52,7 +52,6 @@ int main(){
 
         unsigned long long divisor = gcd(ways, total);
         cout << ways/divisor << "/" << total/divisor << endl;
-
     }
     return 0;
 }

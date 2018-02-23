@@ -14,7 +14,7 @@ int main(){
         if (N == 0) break;
 
         // number of diagonals of an n-gon is
-        // n(n-1)/2 - n = N
+        // N = n(n-1)/2 - n
         // 2N = n^2 - 3n -> n^2 - 3n - 2N = 0
         // n = (3 + root(9-8N))/2
 
