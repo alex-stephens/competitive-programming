@@ -8,7 +8,6 @@ T = int(input())
 for _ in range(T):
     string = list(input())
 
-    
     sortedString = ['0'] * len(string)
     j = 0
     for i in range(26):
