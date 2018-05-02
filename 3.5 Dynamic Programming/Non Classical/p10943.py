@@ -6,8 +6,8 @@ cap = 100
 # dp[n][k] is the number of ways to get n using k integers
 dp = [[0 for _ in range(cap+1)] for _ in range(cap+1)]
 
+# base cases
 dp[0][0] = 1
-
 for n in range(cap+1):
     dp[n][1] = 1
 
