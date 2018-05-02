@@ -17,7 +17,7 @@ def success(containers, m, capacity):
             currentContainer += 1
             if containers[i] > capacity:
                 return False
-            currentAlloc += containers[i]
+            currentAlloc = containers[i]
 
     return True if currentContainer <= m else False
 
@@ -30,7 +30,6 @@ while True:
         break
 
     containers = list(map(int, input().split()))
-
 
     # binary search the answer
     i, j = 1, sum(containers)
